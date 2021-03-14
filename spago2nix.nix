@@ -2,11 +2,12 @@
 
 import (
   pkgs.fetchFromGitHub {
-    owner = "justinwoo";
+    owner = "evanrelf";
     repo = "spago2nix";
-    rev = "704fc193dd1066d3bee91e525ad5ea4876ad990e";
-    sha256 = "1g82s3wz18lxif3pdd9nk6vb3c5cy1i1w5xpkl9gpvc44x8w7lrl";
+    rev = "89f60cd07aae71f83aa5a8eece7adf67cf68d471";
+    sha256 = "1xakprpb6r95snq56xrhhbwp1xhhzqjsrkh63al05qfvmv9q41k3";
   }
 ) {
   inherit pkgs;
+  spago = import ./spago.nix { inherit pkgs; };
 }
